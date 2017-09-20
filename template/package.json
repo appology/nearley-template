@@ -24,11 +24,14 @@
     "nearley": "node scripts/nearley.js",
     "babel": "node scripts/babel.js",
     "build": "node scripts/build.js",
+    "clean": "node scripts/clean.js",
     "example": "node scripts/example.js",
     "test": "node scripts/test.js",
     "watch": "npm-watch",
     "prepublish": "npm run build",
-    "prerelease": "git add . && git commit -m 'prerelease' && npm version prerelease && npm publish --tag next"
+    "postpublish": "npm run clean",
+    "prerelease": "git add . && git commit -m 'prerelease' && npm version prerelease && npm publish --tag next",
+    "release": "git add . && git commit -m 'release' && npm version release && npm publish"
   },
   "repository": {
     "type": "git",

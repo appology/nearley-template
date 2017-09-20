@@ -28,10 +28,10 @@
     "example": "node scripts/example.js",
     "test": "node scripts/test.js",
     "watch": "npm-watch",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "postpublish": "npm run clean",
-    "prerelease": "git add . && git commit -m 'prerelease' && npm version prerelease && npm publish --tag next",
-    "release": "git add . && git commit -m 'release' && npm version release && npm publish"
+    "prerelease": "git add . 2>/dev/null && git commit -m 'prerelease' 2>/dev/null && npm version prerelease && npm publish --tag next",
+    "release": "git add . 2>/dev/null && git commit -m 'release' 2>/dev/null && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",

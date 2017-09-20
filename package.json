@@ -9,9 +9,10 @@
   "scripts": {
     "build": "node scripts/build.js",
     "clean": "node scripts/clean.js",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "postpublish": "npm run clean",
-    "prerelease": "git add . && git commit -m 'prerelease' && npm version prerelease && npm publish --tag next"
+    "prerelease": "git add . 2>/dev/null && git commit -m 'prerelease' 2>/dev/null && npm version prerelease 2>/dev/null && npm publish --tag next2>/dev/null",
+    "release": "git add . 2>/dev/null && git commit -m 'release' 2>/dev/null && npm version patch 2>/dev/null && npm publish2>/dev/null"
   },
   "repository": {
     "type": "git",

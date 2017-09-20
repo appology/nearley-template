@@ -1,6 +1,6 @@
 *
-!/lib/**
-!/index.js
+!/bin/**
+!/template.zip
 !/LICENSE
 !/README.md
 !/RELEASE-NOTES.md

@@ -1,4 +1,4 @@
-var shell = require('shelljs')
+const shell = require('shelljs')
 
 if(shell.exec('node node_modules/nearley/bin/nearleyc.js src/grammar.ne > src/grammar.js --color=always').code != 0) {
   shell.exit(1)

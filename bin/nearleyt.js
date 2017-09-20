@@ -4,6 +4,7 @@ const path = require("path")
 const fs = require('fs')
 const readline = require('readline')
 const shell = require('shelljs')
+const zipper = require('zip-local')
 const ora = require('ora')
 
 var command = process.argv[2];
@@ -45,24 +46,21 @@ if (command === 'init') {
                   info.github_repo = github_repo.trim() || '{GITHUB_REPO}'
 
                   // copy files
-                  spinner.start('Copying files...')
-                  if (shell.exec(`cp -r ${path.join(__dirname, '../template/')} . >> nearleyt.log 2>&1`).code != 0) {
-                    spinner.fail('Unable to copy template. Check nearleyt.log for details.')
-                    shell.exit(1)
-                  }
-                  spinner.succeed('Files copied.')
+                  spinner.start('Copying template...')
+                  zipper.sync.unzip(path.join(__dirname, '../template.zip')).save(".");
+                  spinner.succeed('Template copied.')
 
                   // patch files (e.g. package.json with project_name, project_description, etc.)
-                  spinner.start('Patching files...')
+                  spinner.start('Patching template...')
                   var files = ['package.json', 'README.md']
                   Object.keys(info).forEach(i => {
                     shell.sed('-i', i, info[i], files)
                   })
-                  spinner.succeed('Files patched.')
+                  spinner.succeed('Template patched.')
 
                   // npm i
                   spinner.start('Installing dependencies...')
-                  if (shell.exec('npm i >> nearleyt.log 2>&1').code != 0) {
+                  if (shell.exec('npm i').toEnd('nearleyt.log').code != 0) {
                     spinner.fail('Dependency installation failed. Check nearleyt.log for details.')
                     shell.exit(1)
                   }
@@ -70,7 +68,7 @@ if (command === 'init') {
 
                   // npm test
                   spinner.text = 'Running tests...'
-                  if (shell.exec('npm test >> nearleyt.log 2>&1').code != 0) {
+                  if (shell.exec('npm test').toEnd('nearleyt.log').code != 0) {
                     spinner.fail('Unable to run tests, or some tests failed. Check nearleyt.log for details.')
                     shell.exit(1)
                   }

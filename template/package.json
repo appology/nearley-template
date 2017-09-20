@@ -27,7 +27,8 @@
     "example": "node scripts/example.js",
     "test": "node scripts/test.js",
     "watch": "npm-watch",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "prerelease": "git add . && git commit -m 'prerelease' && npm version prerelease && npm publish --tag next"
   },
   "repository": {
     "type": "git",

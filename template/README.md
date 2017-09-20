@@ -1,4 +1,4 @@
-# github_username / repo_name [![Build Status](https://travis-ci.org/github_username/repo_name.svg?branch=master)]
+# github_username / github_repo [![Build Status](https://travis-ci.org/github_username/github_repo.svg?branch=master)]
 
 A grammar and stream-friendly parser.
 

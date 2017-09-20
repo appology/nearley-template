@@ -1,6 +1,6 @@
 {
   "name": "nearley-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A template for nearley parsers",
   "main": "index.js",
   "bin": {

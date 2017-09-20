@@ -2,7 +2,7 @@
 
 Your own DSL, in javascript, in a nice reusable package!
 
-Created with ♡ by Appology
+Crafted with ♡ by Appology
 
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
 

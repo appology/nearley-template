@@ -1,6 +1,6 @@
 # appology / nearley-template [![Build Status](https://travis-ci.org/appology/nearley-template.svg?branch=master)](https://travis-ci.org/appology/nearley-template)
 
-Make your own DSL in javascript!
+Your own DSL, in javascript, in a nice reusable package!
 
 Created with ♡ by Appology
 
@@ -17,7 +17,7 @@ mkdir my_project && cd my_project
 nearleyt init
 ```
 
-After a few short questions, you'll be ready to hack with:
+After a few short questions, you'll be **ready to hack** with:
 - A sample [nearley grammar](https://nearley.js.org/) that emulates a calculator
 - Unit testing with [ava](https://github.com/avajs/ava)
 - Modern javascript via [babel](https://babeljs.io/)
@@ -26,7 +26,7 @@ After a few short questions, you'll be ready to hack with:
 - Watch support via [npm-watch](https://github.com/M-Zuber/npm-watch)
 - Visual Studio Code support (settings.json)
 
-## Some helpful commands:
+### Some helpful commands:
 ```bash
 # compile the grammar and javascript files
 # under /src into /lib

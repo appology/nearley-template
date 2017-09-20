@@ -16,7 +16,7 @@
     "url": "https://github.com/appology/nearley-template/issues"
   },
   "homepage": "https://github.com/appology/nearley-template#readme",
-  "devDependencies": {
+  "dependencies": {
     "ora": "^1.3.0",
     "shelljs": "^0.7.8"
   }

@@ -1,0 +1,9 @@
+{
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "files.exclude": {
+      "node_modules/": true,
+      "src/grammar.js" : true,
+      "lib" : true
+    }
+  }

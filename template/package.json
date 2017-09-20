@@ -1,0 +1,58 @@
+{
+  "name": "package_name",
+  "version": "package_version",
+  "description": "package_description",
+  "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,ne",
+      "ignore": "src/grammar.js",
+      "quiet": false
+    },
+    "nearley": {
+      "patterns": [
+        "src/"
+      ],
+      "extensions": "ne",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "nearley": "node scripts/nearley.js",
+    "babel": "node scripts/babel.js",
+    "build": "node scripts/build.js",
+    "example": "node scripts/example.js",
+    "postinstall": "npm run build",
+    "test": "node scripts/test.js",
+    "watch": "npm-watch"
+  },
+  "dependencies": {
+    "nearley": "^2.11.0"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.7.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "npm-watch": "^0.2.0",
+    "prettyjson": "^1.2.1",
+    "shelljs": "^0.7.8"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}

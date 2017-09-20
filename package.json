@@ -1,0 +1,15 @@
+{
+  "name": "nearley-template",
+  "version": "0.0.0",
+  "description": "A template for nearley parsers",
+  "main": "index.js",
+  "bin": {
+    "nearleyt": "bin/nearleyt.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ora": "^1.3.0",
+    "shelljs": "^0.7.8"
+  }
+}

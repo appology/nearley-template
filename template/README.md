@@ -2,6 +2,6 @@
 
 A grammar and stream-friendly parser.
 
-Created with ♡ by github_username
+Crafted with ♡ by github_username
 
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.

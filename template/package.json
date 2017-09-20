@@ -29,6 +29,15 @@
     "test": "node scripts/test.js",
     "watch": "npm-watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github_username/github_repo.git"
+  },
+  "author": "github_username",
+  "license": "package_license",
+  "bugs": {
+    "url": "https://github.com/github_username/github_repo/issues"
+  },
   "dependencies": {
     "nearley": "^2.11.0"
   },

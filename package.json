@@ -1,6 +1,6 @@
 {
   "name": "nearley-template",
-  "version": "0.1.0",
+  "version": "0.1.1-0",
   "description": "Your own DSL, in javascript, in a nice reusable package!",
   "main": "index.js",
   "bin": {

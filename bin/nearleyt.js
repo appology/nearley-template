@@ -83,7 +83,7 @@ if (command === 'init') {
           })
         })
       })
-    }, 1500)
+    }, 750)
   });
 } else {
   shell.echo('The only currently supported command is \'nearleyt init\'')

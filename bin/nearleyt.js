@@ -58,24 +58,25 @@ if (command === 'init') {
                   })
                   spinner.succeed('Template patched.')
 
-                  // npm i
-                  spinner.start('Installing dependencies...')
-                  if (shell.exec('npm i').toEnd('nearleyt.log').code != 0) {
-                    spinner.fail('Dependency installation failed. Check nearleyt.log for details.')
-                    shell.exit(1)
-                  }
-                  spinner.succeed('Dependencies installed.')
+                  // // npm i
+                  // spinner.start('Installing dependencies...')
+                  // if (shell.exec('npm i').toEnd('nearleyt.log').code != 0) {
+                  //   spinner.fail('Dependency installation failed. Check nearleyt.log for details.')
+                  //   shell.exit(1)
+                  // }
+                  // spinner.succeed('Dependencies installed.')
 
-                  // npm test
-                  spinner.text = 'Running tests...'
-                  if (shell.exec('npm test').toEnd('nearleyt.log').code != 0) {
-                    spinner.fail('Unable to run tests, or some tests failed. Check nearleyt.log for details.')
-                    shell.exit(1)
-                  }
-                  spinner.succeed('Tests passed!')
+                  // // npm test
+                  // spinner.text = 'Running tests...'
+                  // if (shell.exec('npm test').toEnd('nearleyt.log').code != 0) {
+                  //   spinner.fail('Unable to run tests, or some tests failed. Check nearleyt.log for details.')
+                  //   shell.exit(1)
+                  // }
+                  // spinner.succeed('Tests passed!')
 
                   // display completed message
                   shell.echo('Template generation complete!')
+                  shell.echo('Run `npm i && npm test` to ensure everything went well.')
                 })
               })
             })

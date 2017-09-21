@@ -36,14 +36,14 @@ if (command === 'init') {
           rl.question(`package description: (${default_package_description}) `, package_description => {
             rl.question(`package license: (${default_package_license}) `, package_license => {
               rl.question('github username: ', github_username => {
-                rl.question('github repo: ', github_repo => {
+                rl.question(`github repo: (${default_package_name}) `, github_repo => {
                   rl.close()
                   info.package_name = package_name.trim() || default_package_name
                   info.package_version = package_version.trim() || '0.0.1'
                   info.package_description = package_description.trim() || default_package_description
                   info.package_license = package_license.trim() || default_package_license
                   info.github_username = github_username.trim() || '{GITHUB_USERNAME}'
-                  info.github_repo = github_repo.trim() || '{GITHUB_REPO}'
+                  info.github_repo = github_repo.trim() || default_package_name
 
                   // copy files
                   spinner.start('Copying template...')

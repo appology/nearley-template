@@ -7,7 +7,7 @@ Crafted with ♡ by Appology
 Made possible by the *super awesome* [nearley](https://nearley.js.org/) parser toolkit.
 
 ## Before you install...
-Please keep in mind that until this project is not yet battle tested.
+Please keep in mind that this project is not yet battle tested.
 
 ## Issues?
 You can submit new issues using [GitHub Issues](https://github.com/appology/nearley-template/issues)
